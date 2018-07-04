@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Checkbox } from "antd";
 const styles = {
   textAlign: "left",
   padding: "20px",
@@ -10,13 +11,10 @@ const ulStyles = {
   listStyle: "none"
 };
 
-const ListItem = ({ item, idx }) => {
+const ListItem = ({ title, completed }) => {
   return (
-    <li key={idx}>
-      <label>
-        <input type="checkbox" />
-        {item}
-      </label>
+    <li>
+      <Checkbox defaultChecked={completed}>{title}</Checkbox>
     </li>
   );
 };
@@ -26,7 +24,7 @@ const LectureGoalList = props => {
       <div>{props.title}</div>
       <ul>
         {props.items.map((item, idx) => {
-          return <ListItem item={item} idx={idx} />;
+          return <ListItem key={idx} {...item} />;
         })}
       </ul>
     </div>

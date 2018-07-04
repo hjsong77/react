@@ -4,11 +4,12 @@ import Timer from "./conponents/Timer";
 import moment from "moment";
 import logo from "./logo.svg";
 import "./App.css";
+import "antd/dist/antd.css";
 
 const goals = [
-  "1.react개발환경구축한다.",
-  "2.새로운 자바스크립트 문법을 익힌다.",
-  "3.개발 편의를 위한 vscode IDE를 익힌다."
+  { title: "1.react개발환경구축한다.", completed: true },
+  { title: "2.새로운 자바스크립트 문법을 익힌다.", completed: true },
+  { title: "3개발 편의를 위한 vscode IDE를 익힌다.", completed: true }
 ];
 
 class App extends Component {
