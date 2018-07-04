@@ -43,7 +43,6 @@ class Timer extends Component {
   componentWillUnmount() {
     if (this.nTimer) {
       clearInterval(this.nTimer);
-      this.nTimer = null;
     }
   }
 }
